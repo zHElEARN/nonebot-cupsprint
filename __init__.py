@@ -13,7 +13,10 @@ __plugin_meta__ = PluginMetadata(
     name="nonebot-cupsprint",
     description="A NoneBot plugin for printing files or images",
     usage="Reply with 'print' to print the file or image",
+    type="application",
+    homepage="https://github.com/zHElEARN/nonebot-cupsprint",
     config=Config,
+    supported_adapters={"~onebot.v11"}
 )
 
 config = get_plugin_config(Config).cupsprint
