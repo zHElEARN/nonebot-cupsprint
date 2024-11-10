@@ -1,6 +1,6 @@
-# nonebot-cupsprint
+# nonebot-plugin-cupsprint
 
-`nonebot-cupsprint` 是一个适用于 [NoneBot2](https://github.com/nonebot/nonebot2) 的插件，支持文件或图片的打印和扫描操作。用户可以通过简单的命令实现文件打印以及扫描图片，并可自定义扫描分辨率、模式等。
+`nonebot-plugin-cupsprint` 是一个适用于 [NoneBot2](https://github.com/nonebot/nonebot2) 的插件，支持文件或图片的打印和扫描操作。用户可以通过简单的命令实现文件打印以及扫描图片，并可自定义扫描分辨率、模式等。
 
 ## 功能
 
@@ -11,10 +11,10 @@
 
 1. **安装插件**：
 
-    将 `nonebot-cupsprint` 添加到您的 NoneBot2 项目中：
+    将 `nonebot-plugin-cupsprint` 添加到您的 NoneBot2 项目中：
 
     ```bash
-    git clone https://github.com/zHElEARN/nonebot-cupsprint plugins/nonebot-cupsprint
+    git clone https://github.com/zHElEARN/nonebot-plugin-cupsprint plugins/nonebot-plugin-cupsprint
     ```
 
 2. **环境依赖**：

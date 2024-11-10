@@ -19,7 +19,7 @@ from nonebot.adapters.onebot.v11 import (
 from .config import Config
 
 __plugin_meta__ = PluginMetadata(
-    name="nonebot-cupsprint",
+    name="nonebot-plugin-cupsprint",
     description="一个支持文件打印和扫描的 NoneBot 插件，支持自定义分辨率和扫描模式",
     usage=(
         "使用方法：\n"
@@ -28,7 +28,7 @@ __plugin_meta__ = PluginMetadata(
         "插件支持设置扫描模式、分辨率、扫描区域等参数"
     ),
     type="application",
-    homepage="https://github.com/zHElEARN/nonebot-cupsprint",
+    homepage="https://github.com/zHElEARN/nonebot-plugin-cupsprint",
     config=Config,
     supported_adapters={"~onebot.v11"},
 )
