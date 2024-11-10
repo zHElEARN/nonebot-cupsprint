@@ -20,13 +20,19 @@ from .config import Config
 
 __plugin_meta__ = PluginMetadata(
     name="nonebot-cupsprint",
-    description="A NoneBot plugin for printing files or images",
-    usage="Reply with 'print' to print the file or image",
+    description="一个支持文件打印和扫描的 NoneBot 插件，支持自定义分辨率和扫描模式",
+    usage=(
+        "使用方法：\n"
+        "1. 回复 '打印' 来打印文件或图片\n"
+        "2. 输入 '扫描 [分辨率]' 进行扫描（分辨率可选，默认为配置中的默认值）\n"
+        "插件支持设置扫描模式、分辨率、扫描区域等参数"
+    ),
     type="application",
     homepage="https://github.com/zHElEARN/nonebot-cupsprint",
     config=Config,
     supported_adapters={"~onebot.v11"},
 )
+
 
 config = get_plugin_config(Config).cupsprint
 
@@ -133,7 +139,7 @@ async def handle_scan(event: Event, arg: Message = CommandArg()):
     if not is_authorized(event):
         await scan_command.finish("您没有权限执行扫描操作。")
         return
-    
+
     user_resolution = None
     if arg:
         try:
@@ -142,7 +148,6 @@ async def handle_scan(event: Event, arg: Message = CommandArg()):
             await scan_command.finish("分辨率无效，请输入有效的数字。")
 
     resolution = user_resolution if user_resolution else config.scan_resolution
-
 
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     output_path = f"/tmp/scan_{timestamp}.jpg"
